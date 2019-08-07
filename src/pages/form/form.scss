@@ -1,0 +1,29 @@
+page-form {
+
+
+.page-content .fixed-content {
+	//background: url('../assets/imgs/login-bg.jpg');
+	background-size:cover;
+	background-position:center;
+}
+.signup-grid{
+	color: #ccc;
+    display:table;
+    >ion-row{
+        display:table-cell;
+        vertical-align:middle;
+    }	
+}
+ion-label,ion-input, ion-textarea{
+	color: black;
+}
+.check{
+	top: 5px;
+}
+.item{
+	background:transparent;
+    line-height: 2;
+    margin-bottom: 10px;
+}
+}
+

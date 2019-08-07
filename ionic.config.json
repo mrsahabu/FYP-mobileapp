@@ -1,5 +1,7 @@
 {
   "name": "meter-reding",
-  "app_id": "",
+  "integrations": {
+    "cordova": {}
+  },
   "type": "ionic-angular"
 }

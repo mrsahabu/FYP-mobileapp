@@ -1,14 +1,35 @@
 <ion-header>
   <ion-navbar>
-    <ion-title>
-      Ionic Blank
-    </ion-title>
+    <ion-title>Meter Reading System</ion-title>
+    <button ion-button full color="green" *ngIf ="manual" (click)="nextPage()"> Enter Manual
+          <ion-icon name="arrow-forward" class="ml-10"> </ion-icon>
+    </button>
   </ion-navbar>
 </ion-header>
+<ion-content style="background: none transparent;">
+  <div class="img-wrapper">
+<!-- <img *ngIf="!captured_image" class="w-100p bg-empty-img captured-img" margin-top margin-bottom src="assets/imgs/default.png">
+ -->
+ 
+    <angular-cropper  #angularCropper [cropperOptions]="cropperOptions" [imageUrl]="captured_image" *ngIf="captured_image"></angular-cropper>
+    <img *ngIf="croppedImage" class="w-100p captured-img" margin-top margin-bottom [src]="croppedImage">
+ 
+  </div>
 
-<ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
 </ion-content>
+  <div class="footer-spacer"></div>
+  <ion-footer class="sticky-footer">
+    <ion-row>
+      <ion-col col-6>
+        <button ion-button full (click)="openCamera()">
+          <ion-icon name="camera" class="mr-10"></ion-icon>
+        Capture Image
+        </button>
+      </ion-col>
+      <ion-col col-6>
+        <button ion-button full color="green" (click)="proceed()"> Proceed
+          <ion-icon name="arrow-forward" class="ml-10"> </ion-icon>
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-footer>

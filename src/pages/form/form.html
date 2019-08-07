@@ -1,0 +1,49 @@
+<!--
+  Generated template for the SignupPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-content no-bounce padding class="page-content">
+  <form class="w-100p h-100p" [formGroup]="dataForm" (ngSubmit)="submit()">
+    <ion-grid class="signup-grid">
+      <ion-row class="row-flex ">    
+        <div class="w-100p">
+          <ion-list class="w-100p">
+            <ion-item no-padding>
+              <ion-label>Customer ID</ion-label>
+              <ion-input placeholder="customer id" value="{{customerId}}" minlength=14 maxlength=14 type="text" formControlName="cid"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+              <ion-label>Reading Type</ion-label>
+              <ion-input placeholder="" type="text" formControlName="readingType"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+              <ion-label>Divison</ion-label>
+              <ion-input placeholder="Divison" type="text" formControlName="divison"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+              <ion-label>Sub Division</ion-label>
+              <ion-input placeholder="Sub-Divison" type="text" formControlName="subdivison"></ion-input>
+            </ion-item>
+            <ion-item no-padding>
+              <ion-label>Reading</ion-label>
+              <ion-input placeholder="Reading" type="text" value="{{reading}}" formControlName="reading"></ion-input>
+            </ion-item>
+            
+          </ion-list>
+          <div margin>
+            <div class="mb-10">
+              <ion-checkbox color="secondary" checked="false" class="check mr-5" formControlName="checked"></ion-checkbox>
+              <ion-note color="white"> Have you checked all the details? </ion-note>
+            </div>
+          </div>
+          <button ion-button outline block color="white" type="submit" [disabled]="!dataForm.valid" >Submit</button>
+          
+        </div>
+      </ion-row>
+    </ion-grid>
+  </form>
+
+</ion-content>
